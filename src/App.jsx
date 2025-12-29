@@ -1,21 +1,15 @@
-import './App.css'
+import TodoList from './TodoList.jsx';
+import TodoForm from './TodoForm.jsx';  // ADD THIS
+import './App.css';
 
 function App() {
-  const todos = [
-    {id: 1, title: "review resources"},
-    {id: 2, title: "take notes"},
-    {id: 3, title: "code out app"}
-  ];
-
   return (
-  <div style={{ textAlign: 'left' }}>
-    <h1>My Todos</h1>
-    <ul>
-      {todos.map(todo => <li key={todo.id}>{todo.title}</li>)}
-    </ul>
-  </div>
-);
-
+    <div style={{ textAlign: 'left' }}>
+      <h1>My Todos</h1>
+      <TodoForm />     {/* ADD THIS */}
+      <TodoList />
+    </div>
+  );
 }
 
 export default App;
